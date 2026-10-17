@@ -1,0 +1,111 @@
+{
+ "model": "GradientBoosting (mock)",
+ "accuracy": 0.81,
+ "f1_macro": 0.77,
+ "n_train": 52,
+ "n_test": 19,
+ "classes": [
+  "safe_walkway",
+  "safe_ppe",
+  "unsafe_fatigue",
+  "unsafe_no_helmet",
+  "unsafe_height_no_harness",
+  "unsafe_ladder",
+  "unsafe_machinery",
+  "unsafe_lifting"
+ ],
+ "confusion_matrix": [
+  [
+   4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   4,
+   1,
+   0,
+   1,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   2,
+   1,
+   0,
+   0,
+   1,
+   1
+  ],
+  [
+   0,
+   0,
+   0,
+   4,
+   0,
+   0,
+   0,
+   1
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   2,
+   1,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   3,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   4,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   0,
+   2
+  ]
+ ],
+ "feature_importances": {
+  "head_pitch_mean": 0.18,
+  "motion_energy": 0.15,
+  "height_max": 0.14,
+  "near_edge_frac": 0.12,
+  "isolation_dist": 0.1,
+  "stoop_frac": 0.09,
+  "wrist_speed": 0.08,
+  "n_persons": 0.06,
+  "arms_overhead_frac": 0.05,
+  "kpt_conf_mean": 0.03
+ }
+}

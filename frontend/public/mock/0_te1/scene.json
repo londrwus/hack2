@@ -1,0 +1,1 @@
+{"points":"scene_points.bin","n_points":135000,"bounds":{"min":[-10,0,-4],"max":[10,12,12.1]},"ground_y":0,"edges":[{"polyline":[[0,6,4],[9,6,4]],"drop_m":6},{"polyline":[[0,6,4],[0,6,10]],"drop_m":6}],"camera":{"fov":60,"position":[0,1.5,-9]}}

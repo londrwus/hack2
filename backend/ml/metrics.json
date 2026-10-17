@@ -1,0 +1,244 @@
+{
+  "accuracy": 0.647887323943662,
+  "f1": 0.5933562428407789,
+  "confusion_matrix": [
+    [
+      10,
+      2
+    ],
+    [
+      23,
+      36
+    ]
+  ],
+  "labels": [
+    "safe",
+    "unsafe"
+  ],
+  "multiclass": {
+    "accuracy": 0.7464788732394366,
+    "f1": 0.2931034482758621,
+    "confusion_matrix": [
+      [
+        49,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "Safe Walkway Violation",
+      "Unauthorized Intervention",
+      "Opened Panel Cover",
+      "Carrying Overload with Forklift",
+      "Safe Walkway",
+      "Authorized Intervention",
+      "Closed Panel Cover",
+      "Safe Carrying"
+    ]
+  },
+  "feature_importances": [
+    {
+      "name": "duration",
+      "importance": 0.10838880426183303
+    },
+    {
+      "name": "max_drop_m",
+      "importance": 0.08398994012412889
+    },
+    {
+      "name": "fatigue_mean",
+      "importance": 0.04731014839561429
+    },
+    {
+      "name": "height_m_std",
+      "importance": 0.024181466768574748
+    },
+    {
+      "name": "droop_p90",
+      "importance": 0.023393525447036573
+    },
+    {
+      "name": "height_risk_p90",
+      "importance": 0.021758074341419506
+    },
+    {
+      "name": "motion_std",
+      "importance": 0.021034771427318952
+    },
+    {
+      "name": "risk_mean",
+      "importance": 0.020750750187230868
+    },
+    {
+      "name": "stoop_max",
+      "importance": 0.020437280101191672
+    },
+    {
+      "name": "height_m_p90",
+      "importance": 0.02026348817240759
+    },
+    {
+      "name": "fatigue_p90",
+      "importance": 0.019478137715282787
+    },
+    {
+      "name": "height_risk_std",
+      "importance": 0.01940575437822245
+    },
+    {
+      "name": "fatigue_max",
+      "importance": 0.018666714214909633
+    },
+    {
+      "name": "withdrawal_max",
+      "importance": 0.018286703639369416
+    },
+    {
+      "name": "risk_p90",
+      "importance": 0.017877236241066217
+    },
+    {
+      "name": "torso_deg_std",
+      "importance": 0.017553240571917643
+    },
+    {
+      "name": "fatigue_std",
+      "importance": 0.0174572653665297
+    },
+    {
+      "name": "knee_deg_p90",
+      "importance": 0.01697310913729969
+    },
+    {
+      "name": "stoop_mean",
+      "importance": 0.01657491641570917
+    },
+    {
+      "name": "n_persons_mean",
+      "importance": 0.016168941217816587
+    },
+    {
+      "name": "withdrawal_p90",
+      "importance": 0.015838150586680966
+    },
+    {
+      "name": "knee_deg_max",
+      "importance": 0.015619391877637027
+    },
+    {
+      "name": "risk_max",
+      "importance": 0.015285006094263651
+    },
+    {
+      "name": "torso_deg_mean",
+      "importance": 0.015135634570607077
+    },
+    {
+      "name": "torso_deg_max",
+      "importance": 0.01492126249262985
+    },
+    {
+      "name": "n_workers",
+      "importance": 0.014385954984155404
+    },
+    {
+      "name": "motion_mean",
+      "importance": 0.014324260612454356
+    },
+    {
+      "name": "torso_deg_p90",
+      "importance": 0.014261791006384906
+    },
+    {
+      "name": "height_risk_mean",
+      "importance": 0.013846072857885108
+    },
+    {
+      "name": "withdrawal_std",
+      "importance": 0.013623908605293689
+    }
+  ],
+  "n_train": 71,
+  "n_test": 0,
+  "n_labelled": 71,
+  "filename_split_eval": {},
+  "threshold": 0.8575,
+  "balanced_accuracy": 0.7217514124293786,
+  "model": "RandomForest(400 trees, class_weight=balanced)",
+  "notes": "Tiny, heavily imbalanced dataset: 71 labelled clips, class 0 dominates (50) and classes 1-7 have ~3 clips each. Headline metrics are 3-fold stratified out-of-fold predictions on all labelled clips; filename tr/te split metrics are in filename_split_eval. Expect high variance; multiclass results are near-anecdotal. Features are hand-crafted pose/depth aggregates from the pipeline, not learned. Labelled clips get out-of-fold predictions; other clips use the model fit on all data. Decision threshold was tuned on the same out-of-fold probabilities (optimistic). Treat as a demo, not a validated safety model."
+}
